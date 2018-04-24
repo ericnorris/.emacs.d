@@ -1,5 +1,9 @@
 # .emacs.d/
 
-## Getting Started
+## Installation
 
-1) `make`
+```
+git clone https://github.com/ericnorris/.emacs.d.git && cd .emacs.d/
+git checkout <environment-branch>
+make
+```
