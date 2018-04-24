@@ -11,15 +11,15 @@
 
 (setq package-archives
       '(("GNU" . "https://elpa.gnu.org/packages/")
-	("MELPA Stable" . "https://stable.melpa.org/packages/")
-	("MELPA" . "https://melpa.org/packages/")))
+        ("MELPA Stable" . "https://stable.melpa.org/packages/")
+        ("MELPA" . "https://melpa.org/packages/")))
 
 (defvar package-archive-priorities)
 
 (setq package-archive-priorities
       '(("MELPA"        . 10)
         ("MELPA Stable" . 5)
-	("GNU"          . 0)))
+        ("GNU"          . 0)))
 
 (package-initialize)
 
@@ -93,6 +93,7 @@
 (setq-default show-trailing-whitespace t)
 (setq-default column-number-mode t)
 (setq-default require-final-newline t)
+(setq-default tab-width 4)
 
 ;; Break out task-specific config
 (require 'web-dev)
