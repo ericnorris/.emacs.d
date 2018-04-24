@@ -1,4 +1,4 @@
-;;; web-dev.el --- Additional config for web development
+;;; web-dev.el --- additional config for web development
 ;;; Commentary:
 ;;
 
