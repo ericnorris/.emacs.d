@@ -42,6 +42,10 @@
 ;; Add .emacs.d to the load path
 (add-to-list 'load-path "~/.emacs.d/includes/")
 
+;; Put customizations in a .gitignore'd file
+(setq custom-file "~/.emacs.d/gitignored-custom.el")
+(load custom-file)
+
 ;; Put autosaves in a different directory, turn off backups
 (setq auto-save-file-name-transforms`((".*" ,"~/.emacs.d/saves/" t)))
 (setq auto-save-list-file-name nil)
