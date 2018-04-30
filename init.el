@@ -100,7 +100,4 @@
 ;; Break out task-specific config
 (require 'web-dev)
 
-;; Load branch-specific config
-(require 'branch-customizations)
-
 ;;; init.el ends here
