@@ -77,13 +77,15 @@
   (add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
 
 ;; fzf install
-(defun fzf-or-fzf-git ()
+(require 'vc-git)
+
+(defun fzf-keybind-hook ()
   (interactive)
-  (if (vc-git-registered buffer-file-name) (fzf-git) (fzf)))
+  (if (vc-git-root buffer-file-name) (fzf-git) (fzf)))
 
 (use-package fzf
   :ensure t
-  :bind ("C-x f" . fzf-or-fzf-git)
+  :bind ("C-x f" . fzf-keybind-hook)
   :config
   (setq-default fzf/executable "~/.emacs.d/fzf/bin/fzf"))
 
