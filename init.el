@@ -97,9 +97,6 @@
 (setq-default require-final-newline t)
 (setq-default tab-width 4)
 
-;; Break out task-specific config
-(require 'web-dev)
-
 ;; Require all files in the autoload directory
 (require 'require-directory)
 (require-directory "~/.emacs.d/autoload/")
