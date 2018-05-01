@@ -19,4 +19,4 @@ php-dev-env: all
 
 chef-env: all
 	rm -f autoload/*
-	ln -t autoload/ includes/etsy-chef
+	ln -t autoload/ includes/etsy-chef.el
