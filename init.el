@@ -39,7 +39,7 @@
   (setq auto-package-update-hide-results t)
   (auto-package-update-maybe))
 
-;; Add .emacs.d to the load path
+;; Add includes to the load path
 (add-to-list 'load-path "~/.emacs.d/includes/")
 
 ;; Put customizations in a .gitignore'd file
@@ -99,5 +99,9 @@
 
 ;; Break out task-specific config
 (require 'web-dev)
+
+;; Require all files in the autoload directory
+(require 'require-directory)
+(require-directory "~/.emacs.d/autoload/")
 
 ;;; init.el ends here
