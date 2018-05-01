@@ -1,4 +1,4 @@
-;;; web-dev.el --- additional config for web development
+;;; php-dev.el --- additional config for php web development
 ;;; Commentary:
 ;;
 
@@ -22,6 +22,6 @@
   :init
   (setq flycheck-disabled-checkers '(php-phpmd php-phpcs)))
 
-(provide 'web-dev)
+(provide 'php-dev)
 
-;;; web-dev.el ends here
+;;; php-dev.el ends here
