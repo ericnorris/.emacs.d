@@ -43,7 +43,8 @@
 (add-to-list 'load-path "~/.emacs.d/includes/")
 
 ;; Put customizations in a .gitignore'd file
-(setq custom-file "~/.emacs.d/gitignored-custom.el")
+(write-region "" nil "~/.emacs.d/customizations.el" t)
+(setq custom-file "~/.emacs.d/customizations.el")
 (load custom-file)
 
 ;; Put autosaves in a different directory, turn off backups

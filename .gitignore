@@ -1,3 +1,8 @@
-elpa
+# ignore package installs
+elpa/
+
+# used by auto-update-package
 .last-package-update-day
-gitignored-custom.el
+
+# ignore emacs customizations
+customizations.el
