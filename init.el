@@ -90,7 +90,10 @@
   :ensure t
   :bind ("C-x f" . fzf-keybind-hook)
   :config
-  (setq-default fzf/executable "~/.emacs.d/fzf/bin/fzf"))
+  (setq-default fzf/executable "~/.emacs.d/fzf/bin/fzf")
+  (when (executable-find "ag")
+    (let ((ag-command "ag --hidden --ignore .git -l -g \"\""))
+      (setenv "FZF_DEFAULT_COMMAND" ag-command))))
 
 ;; General editor settings
 
