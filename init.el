@@ -82,7 +82,9 @@
 
 (defun fzf-keybind-hook ()
   (interactive)
-  (if (vc-git-root buffer-file-name) (fzf-git) (fzf)))
+  (if (vc-git-root (or buffer-file-name default-directory))
+      (fzf-git)
+    (fzf)))
 
 (use-package fzf
   :ensure t
