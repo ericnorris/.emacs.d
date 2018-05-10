@@ -17,6 +17,17 @@ php-dev-env: all
 	rm autoload/*
 	ln -t autoload/ includes/php-dev.el
 
-chef-env: all
+etsy-chef-env: all etsy-chef-env-deps
 	rm -f autoload/*
 	ln -t autoload/ includes/etsy-chef.el
+
+.PHONY: etsy-chef-env-deps
+
+etsy-chef-env-deps: /opt/chef/embedded/bin/foodcritic
+etsy-chef-env-deps: /opt/chef/embedded/bin/cookstyle
+
+/opt/chef/embedded/bin/foodcritic:
+	sudo /opt/chef/embedded/bin/gem install foodcritic
+
+/opt/chef/embedded/bin/cookstyle:
+	sudo /opt/chef/embedded/bin/gem install cookstyle

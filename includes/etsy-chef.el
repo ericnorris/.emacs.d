@@ -7,13 +7,22 @@
 ;; Ruby mode
 (use-package ruby-mode
   :ensure t
-  :mode ("\\.rb'" . ruby-mode))
+  :mode ("\\.rb\\'" . ruby-mode))
+
+;; ERB templates
+(use-package web-mode
+  :ensure t
+  :mode ("\\.erb\\'" . web-mode))
+
+;; Chef-specific flycheck config
 
 (use-package flycheck
   :ensure t
   :init
   (setq flycheck-chef-foodcritic-executable
-        "/opt/chef/embedded/bin/foodcritic"))
+        "/opt/chef/embedded/bin/foodcritic")
+  (setq flycheck-ruby-rubocop-executable
+        "/opt/chef/embedded/bin/cookstyle"))
 
 (provide 'etsy-chef)
 
