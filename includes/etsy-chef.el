@@ -19,10 +19,10 @@
 (use-package flycheck
   :ensure t
   :init
-  (setq flycheck-chef-foodcritic-executable
-        "/opt/chef/embedded/bin/foodcritic")
-  (setq flycheck-ruby-rubocop-executable
-        "/opt/chef/embedded/bin/cookstyle"))
+  (setq-default flycheck-chef-foodcritic-executable
+                "/opt/chef/embedded/bin/foodcritic")
+  (setq-default flycheck-ruby-rubocop-executable
+                "/opt/chef/embedded/bin/cookstyle"))
 
 (provide 'etsy-chef)
 

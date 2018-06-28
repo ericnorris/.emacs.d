@@ -20,7 +20,8 @@
 (use-package flycheck
   :ensure t
   :init
-  (setq flycheck-disabled-checkers '(php-phpmd php-phpcs)))
+  (setq-default flycheck-disabled-checkers
+                (append '(php-phpmd php-phpcs) flycheck-disabled-checkers)))
 
 (provide 'php-dev)
 
