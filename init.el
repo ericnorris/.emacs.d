@@ -102,6 +102,7 @@
 (setq-default column-number-mode t)
 (setq-default require-final-newline t)
 (setq-default tab-width 4)
+(setq-default c-basic-offset 4)
 
 ;; Require all files in the autoload directory
 (require 'require-directory)

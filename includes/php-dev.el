@@ -7,6 +7,8 @@
 (use-package php-mode
   :ensure t
   :mode ("\\.php'" . php-mode)
+  :custom
+  (php-mode-coding-style "PSR-2")
   :config
   (subword-mode 1)
   (c-set-offset 'case-label '+))
