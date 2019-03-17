@@ -20,6 +20,11 @@ php-dev-env: all
 etsy-chef-env: all etsy-chef-env-deps
 	ln -f -s ../includes/etsy-chef.el autoload/etsy-chef.el
 
+.PHONY: python-dev-env
+
+python-dev-env:
+	ln -f -s ../includes/python-dev.el autoload/python-dev.el
+
 
 .PHONY: etsy-chef-env-deps
 
