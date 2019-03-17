@@ -11,15 +11,15 @@ update-git:
 fzf/bin/fzf: fzf/install
 	fzf/install $(FZF_INSTALL_FLAGS) && touch fzf/bin/fzf
 
+
 .PHONY: php-dev-env chef-env
 
 php-dev-env: all
-	rm autoload/*
-	ln -t autoload/ includes/php-dev.el
+	ln -f -s ../includes/php-dev.el autoload/php-dev.el
 
 etsy-chef-env: all etsy-chef-env-deps
-	rm -f autoload/*
-	ln -t autoload/ includes/etsy-chef.el
+	ln -f -s ../includes/etsy-chef.el autoload/etsy-chef.el
+
 
 .PHONY: etsy-chef-env-deps
 
