@@ -1,5 +1,3 @@
-.PHONY: all update-git
-
 FZF_INSTALL_FLAGS := --bin --no-key-bindings --no-completion --no-update-rc
 FZF_INSTALL_FLAGS += --64
 
@@ -12,21 +10,17 @@ fzf/bin/fzf: fzf/install
 	fzf/install $(FZF_INSTALL_FLAGS) && touch fzf/bin/fzf
 
 
-.PHONY: php-dev-env chef-env
-
 php-dev-env: all
 	ln -f -s ../includes/php-dev.el autoload/php-dev.el
 
 etsy-chef-env: all etsy-chef-env-deps
 	ln -f -s ../includes/etsy-chef.el autoload/etsy-chef.el
 
-.PHONY: python-dev-env
-
-python-dev-env:
+python-dev-env: all
 	ln -f -s ../includes/python-dev.el autoload/python-dev.el
 
-
-.PHONY: etsy-chef-env-deps
+ocaml-dev-env:
+	ln -f -s ../includes/ocaml-dev.el autoload/ocaml-dev.el
 
 etsy-chef-env-deps: /opt/chef/embedded/bin/foodcritic
 etsy-chef-env-deps: /opt/chef/embedded/bin/cookstyle
