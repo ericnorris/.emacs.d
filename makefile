@@ -1,22 +1,12 @@
-FZF_INSTALL_FLAGS := --bin --no-key-bindings --no-completion --no-update-rc
-FZF_INSTALL_FLAGS += --64
+all:
 
-all: update-git fzf/bin/fzf
-
-update-git:
-	git pull && git submodule init && git submodule update
-
-fzf/bin/fzf: fzf/install
-	fzf/install $(FZF_INSTALL_FLAGS) && touch fzf/bin/fzf
-
-
-php-dev-env: all
+php-dev-env:
 	ln -f -s ../includes/php-dev.el autoload/php-dev.el
 
-etsy-chef-env: all etsy-chef-env-deps
+etsy-chef-env: etsy-chef-env-deps
 	ln -f -s ../includes/etsy-chef.el autoload/etsy-chef.el
 
-python-dev-env: all
+python-dev-env:
 	ln -f -s ../includes/python-dev.el autoload/python-dev.el
 
 ocaml-dev-env:
